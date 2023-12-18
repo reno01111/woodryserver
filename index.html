@@ -67,7 +67,7 @@
 
 <body>
     <!-- 期間限定:雪アニメーション -->
-    <script src="./js/snow.js" defer></script>
+    <script src="./js/snow.js" defer id="snowJS"></script>
 
 
     <!-- ローディング画面 -->
@@ -142,7 +142,7 @@
 
 
     <!-- テキスト出現アニメJS -->
-    <script src="js/TextAnimation.js"></script>
+    <script src="./js/TextAnimation.js"></script>
 
 
     <!-- ページトップ -->
@@ -199,7 +199,7 @@
     <header id="header">
         <a href="">
             <h1 class="TextTyping">WoodryServer</h1>
-            <script src="js/HeaderText.js"></script>
+            <script src="./js/HeaderText.js"></script>
         </a>
         <a href="#about">
             <div class="scrolldown2"><span>Scroll</span></div>
@@ -215,7 +215,7 @@
               loop：動画をループさせる
               controls：コントロールバーを表示する
                 -->
-                <source src="./movie/Header-Video.mp4" type="video/mp4">
+                <source src="./movie/Header-Video.mp4" type="video/mp4" autoplay muted loop>
                 <source src="./movie/Header-Video.ogv" type="video/ogv">
                 <source src="./movie/Header-Video.webm" type="video/webm">
                 <p>動画を再生できる環境ではありません。</p>
@@ -423,7 +423,8 @@
         <!-- ニュース -->
         <section class="news-sec" id="news">
             <section id="news" class="news">
-                <h2 class="sec-title"><span class="smoothText"><span class="smoothTextTrigger">ニュース</span></span></h2>
+                <h2 class="sec-title"><span class="smoothText"><span class="smoothTextTrigger">ニュース</span></span>
+                </h2>
                 <span class="smoothText"><span class="smoothTextTrigger">
                         <dl>
                             <dt>2023/1217</dt>
@@ -440,7 +441,8 @@
                     </span></span>
             </section>
             <section id="notice" class="notice">
-                <h2 class="sec-title"><span class="smoothText"><span class="smoothTextTrigger">お知らせ</span></span></h2>
+                <h2 class="sec-title"><span class="smoothText"><span class="smoothTextTrigger">お知らせ</span></span>
+                </h2>
                 <span class="smoothText"><span class="smoothTextTrigger">
                         <dl>
                             <dt>2023/12/17</dt>

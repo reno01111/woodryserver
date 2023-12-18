@@ -757,7 +757,7 @@ span.smoothTextTrigger.smoothTextAppear {
 /*文字列後ろの線の設定*/
 .TextTyping::after {
     content: "|";
-    animation: typinganime .8s ease infinite;
+    animation: typinganime 1.1s ease infinite;
 }
 
 @keyframes typinganime {

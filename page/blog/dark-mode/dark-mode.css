@@ -89,8 +89,11 @@ h2 {
 
 
 /* ========== レスポンシブ ========== */
-@media screen and (max-width: 959px) {}
-
+@media screen and (max-width: 959px) {
+    .article-text {
+        max-width: 100%;
+    }
+}
 
 /* ========== ダークモード ========== */
 @media (prefers-color-scheme: dark) {
