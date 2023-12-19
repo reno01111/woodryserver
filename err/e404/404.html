@@ -10,10 +10,17 @@
 </head>
 
 <body class="text">
+    <!-- リダイレクトJS -->
+    <script>
+        window.onload = function () {
+            setTimeout("location.href='../../index.html' ", 5000);
+        }
+    </script>
     <div>
-        <h1><strong>404</strong></h1>
-        <p>このページにコンテンツがないか、準備中です！</p>
-        <a href="../index.html">ホームに戻る</a>
+        <h1 class="err-no">404</h1>
+        <h2>Not Found</h2>
+        <p class="text-p1">残念ながらページが見つかりませんでした...</p>
+        <p>5秒後にトップページへリダイレクトします</p>
     </div>
 </body>
 

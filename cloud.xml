@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>https://woodryserver.pages.dev/</loc>
+  <priority>1.0</priority>
+  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <loc>https://woodryserver.pages.dev/</loc>
+    <image:image>
+        <image:loc>https://woodryserver.pages.dev/img/page-img.png</image:loc>
+        <image:title>WoodryServerWeb</image:title>
+        <image:caption>開催が待ちきれなくて作ったファンメイドのサイトです。公式のサイトではありません。</image:caption>
+    </image:image>
+</url>
+<url>
+  <loc>https://woodryserver.pages.dev/page/rules/rules.html</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://woodryserver.pages.dev/page/rules/site-policy.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://woodryserver.pages.dev/page/gallery/gallery.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://woodryserver.pages.dev/page/blog/dark-mode/dark-mode.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://woodryserver.pages.dev/page/blog/image/image.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://woodryserver.pages.dev/index.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://woodryserver.pages.dev/page/index.html</loc>
+  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+</urlset>

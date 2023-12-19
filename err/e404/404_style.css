@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   background-color: #24292e;
 }
@@ -5,14 +10,13 @@ html {
 .text {
   color: #fff;
   text-align: center;
-  padding-top: 300px;
+  padding-top: 30vh;
 }
 
-.text a {
-  color: white;
-  transition: all 0.3s;
+.err-no {
+  font-size: 100px;
 }
 
-.text a:hover {
-  opacity: 0.6;
+.text-p1 {
+  padding-top: 50px;
 }
