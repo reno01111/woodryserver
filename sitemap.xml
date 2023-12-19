@@ -51,15 +51,5 @@
   <lastmod>2023-12-17T18:42:26+09:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
-<url>
-  <loc>https://reno01111.github.io/woodryserver/page/index.html</loc>
-  <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://reno01111.github.io/woodryserver/page/404/404.html</loc>
-  <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
-</url>
 
 </urlset>
