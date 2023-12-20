@@ -17,11 +17,6 @@
     </image:image>
 </url>
 <url>
-  <loc>https://reno01111.github.io/woodryserver/page/rules/rules.html</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
   <loc>https://reno01111.github.io/woodryserver/page/rules/site-policy.html</loc>
   <priority>0.8</priority>
   <lastmod>2023-12-17T18:42:26+09:00</lastmod>
