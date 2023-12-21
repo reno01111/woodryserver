@@ -439,6 +439,30 @@ html {
 }
 
 
+/* ページトップボタン */
+.page-top-sec {
+    background-color: #eeeeee;
+    padding: 15px;
+}
+
+#page-top-but a {
+    text-decoration: none;
+    color: #313339;
+    display: flex;
+    justify-content: center;
+}
+
+#page-top-but a {
+    padding: 0 5px;
+    transition: all .3s;
+}
+
+#page-top-but a:hover {
+    transform: scale(1.1);
+    opacity: .7;
+}
+
+
 /* フッター */
 .footer {
     background-color: white;
@@ -455,6 +479,7 @@ html {
     font-size: 0.9rem;
     color: #24292e;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .copyright {
@@ -781,6 +806,15 @@ html {
     #qr-share {
         color: #f5f5f5;
         border-bottom: 1px solid #f5f5f5;
+    }
+
+    .page-top-sec {
+        background-color: #313339;
+        border:  1px solid #f5f5f5;
+    }
+
+    #page-top-but a {
+        color: #f5f5f5;
     }
 
     .footer {

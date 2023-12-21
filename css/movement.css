@@ -783,6 +783,10 @@ span.smoothTextTrigger.smoothTextAppear {
         background-color: #777;
     }
 
+    .newssticker {
+        border: 1px solid #bababa;
+    }
+
     .slider a {
         background-color: #313339;
         color: #f5f5f5;
@@ -801,10 +805,6 @@ span.smoothTextTrigger.smoothTextAppear {
         border-radius: 2px;
         background-color: #bababa;
         width: 45%;
-    }
-
-    #g-nav li a {
-        color: #f5f5f5;
     }
 
     #g-nav li a:hover {
