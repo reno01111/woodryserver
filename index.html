@@ -207,7 +207,8 @@
             <div class="scrolldown2"><span>Scroll</span></div>
         </a>
         <div id="video-area">
-            <video id="video" poster="./img/Header-Video.png" webkit-playsinline playsinline muted autoplay loop>
+            <video id="video" poster="./img/Header-Video.png" webkit-playsinline playsinline muted autoplay loop
+                playsinline>
                 <!--
               poster：動画ファイルが利用できない環境で代替表示される画像
               webkit-playsinline：iOS 9までのSafari用インライン再生指定
@@ -215,11 +216,12 @@
               muted：音声をミュートさせる
               autoplay：動画を自動再生させる
               loop：動画をループさせる
-              controls：コントロールバーを表示する
+              controls：コントロールバーを表示するz
                 -->
-                <source src="./movie/Header-Video.mp4" type="video/mp4" autoplay muted loop>
-                <source src="./movie/Header-Video.ogv" type="video/ogv">
-                <source src="./movie/Header-Video.webm" type="video/webm">
+                <source src="./movie/Header-Video.mp4" type="video/mp4" autoplay muted loop playsinline>
+                <source src="./movie/Header-Video.ogv" type="video/ogv" autoplay muted loop playsinline>
+                <source src="./movie/Header-Video.webm" type="video/webm" autoplay muted loop playsinline>
+                <source src="./movie/Header-Video.gif" type="video/gif" autoplay muted loop playsinline>
                 <p>動画を再生できる環境ではありません。</p>
             </video>
             <!--/video-area-->
