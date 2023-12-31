@@ -810,7 +810,7 @@ html {
 
     .page-top-sec {
         background-color: #313339;
-        border:  1px solid #f5f5f5;
+        border: 1px solid #f5f5f5;
     }
 
     #page-top-but a {
@@ -831,4 +831,28 @@ html {
         opacity: 0.5;
         text-decoration: underline;
     }
+}
+
+
+
+
+
+
+
+
+
+
+/* ====== 期間限定 =============== */
+.coundown {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 2rem;
+}
+
+.coundown p {
+    font-size: 200%;
+}
+
+.num {
+    font-size: 250%;
 }

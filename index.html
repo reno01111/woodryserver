@@ -69,7 +69,7 @@
 
 <body>
     <!-- 期間限定:雪アニメーション -->
-    <script src="./js/snow.js" defer id="snowJS"></script>
+    <script src="./js/limited time/" defer id="snowJS"></script>
 
 
     <!-- ローディング画面 -->
@@ -152,7 +152,6 @@
 
 
     <!-- お知らせポップアップ -->
-
     <!-- <div class="overlay">
         <div class="btn_area">
             <p class="ttl">サイトからのお知らせ</p>
@@ -204,7 +203,7 @@
             <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
             <!-- タイピングカスタムJS -->
             <script>
-                new Typed(".auto-input",{
+                new Typed(".auto-input", {
                     strings: ["WoodryServer", "let’s join us!"],
                     loop: true,
                     startDelay: 70,
@@ -301,6 +300,15 @@
                 }
             }());
         </script>
+
+        <!-- 期間限定：カウントダウン -->
+        <section class="coundown">
+            <div class="coundown-text">
+                <p>2024年01月01日00:00まであと</p><span id="coundown01"></span>
+            </div>
+        </section>
+        <script src="./js/limited time/countdown-timer.js"></script>
+
 
         <!-- ニュースステッカー -->
         <section class="newssticker" id="newssticker">
