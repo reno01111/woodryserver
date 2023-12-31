@@ -191,6 +191,7 @@
     position: absolute;
     bottom: 10px;
     left: 50%;
+    padding: 20px;
 }
 
 /*Scrollテキストの描写*/

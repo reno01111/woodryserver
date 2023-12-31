@@ -8,6 +8,9 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- /jquery -->
+
+    <!-- CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
@@ -15,7 +18,8 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
     <script src="js/jquery.layerBoard.js"></script>
-    <!-- /jquery -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- /CDN -->
 
     <!-- フォント類 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -68,12 +72,58 @@
 </head>
 
 <body>
-    <!-- 期間限定:雪アニメーション -->
-    <script src="./js/limited-time/snow.js" defer id="snowJS"></script>
+    <!-- 期間限定 -->
+    <div>
+        <!-- 期間限定:雪アニメーション -->
+        <script src="./js/limited-time/snow.js" defer id="snowJS"></script>
+
+        <!-- 新年用ローディング -->
+        <div id="loading">
+            <div id="loadingLogo">
+                <svg id="mask" width="500" height="400" version="1.1" id="hny" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 400"
+                    enable-background="new 0 0 500 400" xml:space="preserve">
+                    <g>
+                        <path d="M101.1,74h23.6v10.5h-5.1v15.5H143V84.5h-5.2V74h23.5v10.5h-5.1v43.8h5.1v10.6h-23.4v-10.6h5.1v-17.6h-23.5v17.6h5.2v10.6
+                 h-23.6v-10.6l5.2-0.1V84.5h-5.2V74z" />
+                        <path d="M189.6,74h15.5l17.8,54.3h4.9v10.6H213l-4.2-14.1H186l-4.2,14.1h-15.1v-10.6h5L189.6,74z M197.5,86.1l-8.6,28.7h17.1
+                 L197.5,86.1z" />
+                        <path d="M233.4,74h30.7c12.3,0,20.7,8.5,20.7,20.9c0,11.8-8.7,20.1-21.1,20.1h-11.9v13.3h5.1v10.6h-23.5v-10.6h5.2V84.6h-5.2V74z
+                  M251.9,84.6v19.7h8.8c6.3,0,10.9-4.1,10.9-9.8c0-6.1-4.4-9.8-11.4-9.8H251.9z" />
+                        <path d="M290,74h30.7c12.3,0,20.7,8.5,20.7,20.9c0,11.8-8.7,20.1-21.1,20.1h-11.9v13.3h5.1v10.6h-23.5v-10.6h5.2V84.6H290V74z
+                  M308.5,84.6v19.7h8.8c6.3,0,10.9-4.1,10.9-9.8c0-6.1-4.4-9.8-11.4-9.8H308.5z" />
+                        <path
+                            d="M346.9,74h13.9l12,24.7l12-24.7h13.9v10.6h-4.7l-14.6,28v15.7h5.1v10.6h-23.5v-10.6h5.2v-15.8l-14.4-27.9h-4.8V74z" />
+                        <path d="M185.7,168H208v10.6h-5.2v54.3H185l-27.2-49.1v38.5h5.1v10.6h-22.1v-10.6h5.2v-43.7h-5.2V168h22.4l27.8,50.2v-39.7h-5.3
+                 V168z" />
+                        <path
+                            d="M213.3,168H263v20.3h-10.9v-9.8h-20.4v15.5H252v10.6h-20.3v17.6h21.1v-10.9h11.5v21.4h-51.1v-10.6h5.2v-43.7h-5.2V168z" />
+                        <path d="M271.3,168h22.4v10.5h-4.8l8,41L308,168h14.5l10.1,51.4l8.6-40.9h-4.7V168h22.5v10.5h-5l-13.6,54.4h-15.5l-9.8-49.7
+                 l-10.1,49.7h-15.4l-13.6-54.4h-4.9V168z" />
+                        <path
+                            d="M130.8,262h13.9l12,24.7l12-24.7h13.9v10.6h-4.7l-14.6,28v15.7h5.1v10.6h-23.5v-10.6h5.2v-15.8l-14.4-27.9h-4.8V262z" />
+                        <path
+                            d="M187.9,262h49.7v20.3h-10.9v-9.8h-20.4v15.5h20.3v10.6h-20.3v17.6h21.1v-10.9h11.5v21.4h-51.1v-10.6h5.2v-43.7h-5.2V262z" />
+                        <path d="M268.8,262h15.5l17.8,54.3h4.9v10.6h-14.9l-4.2-14.1h-22.8l-4.2,14.1h-15.1v-10.6h5L268.8,262z M276.6,274.1l-8.6,28.7
+                 h17.1L276.6,274.1z" />
+                        <path d="M313.3,262h29.9c20.1,0,22.6,11.7,22.6,17.8c0,9.9-6.2,12.8-8.9,14c6.1,3.1,8.6,6.5,8.6,19.1v3.3h5.3v10.6h-18.2v-16.3
+                 c0-7.7-3.8-11.5-11.6-11.5h-9.2v17.2h4.5v10.6h-23.2v-10.6h5.4v-43.7h-5.3V262z M331.9,272.6v16.6h10.4c6.6,0,10.6-3.2,10.6-8.6
+                 c0-5.3-4-7.9-12.3-7.9H331.9z" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="loadingBg"></div>
+        <script src="./js/limited-time/new-year.js"></script>
+
+        <!-- 期間限定:花火 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+        <script src="./js/fireworks.js"></script>
+    </div>
 
 
     <!-- ローディング画面 -->
-    <div id="splash">
+    <!-- <div id="splash">
         <div id="splash_logo">
             <svg version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" width="1856.5px" height="321.8px" viewBox="0 0 1856.5 321.8"
@@ -135,16 +185,8 @@
 		c-9-10.2-42.3,23.6-61.1,72.9c-1.2,2.7-2,6.4-3.3,9.1C1633.9,369.2,1649.7,347.2,1661.9,326.8z" />
                 </g>
             </svg>
-            <!--/splash-logo-->
         </div>
-        <!--/splash-->
-    </div>
-    <!-- ローディング画面用JS -->
-    <script type="text/javascript" src="./js/loading.js"></script>
-
-
-    <!-- テキスト出現アニメJS -->
-    <script src="./js/TextAnimation.js"></script>
+    </div> -->
 
 
     <!-- ページトップ -->
@@ -192,27 +234,23 @@
             </div>
         </nav>
     </section>
-    <!-- メニューバーJS -->
-    <script type="text/javascript" src="./js/menu.js"></script>
 
 
     <!-- ヘッダー -->
     <header id="header">
-        <a href="">
-            <h1 class="TextTyping"><span class="auto-input"></span></h1>
-            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-            <!-- タイピングカスタムJS -->
-            <script>
-                new Typed(".auto-input", {
-                    strings: ["WoodryServer", "let’s join us!"],
-                    loop: true,
-                    startDelay: 70,
-                    typeSpeed: 90,
-                    backSpeed: 80,
-                });
-            </script>
-        </a>
-        <a href="#about">
+        <h1 class="TextTyping"><span class="auto-input"></span></h1>
+        <!-- タイピングカスタムJS -->
+        <script>
+            new Typed(".auto-input", {
+                strings: ["Year 2024", "Happy New Year!", "WoodryServer", "let's join us!"],
+                loop: true,
+                startDelay: 0, //開始前の遅延
+                typeSpeed: 90,
+                backSpeed: 80,
+            });
+        </script>
+
+        <a class="scroll" href="#about">
             <div class="scrolldown2"><span>Scroll</span></div>
         </a>
         <div id="video-area">
@@ -304,11 +342,10 @@
         <!-- 期間限定：カウントダウン -->
         <section class="coundown">
             <div class="coundown-text">
-                <p>2024年01月01日00:00まであと</p><span id="coundown01"></span>
+                <p>2024年01月01日00:00まであと</p>
+                <h2>Happy New Year!</h2>
             </div>
         </section>
-        <script src="./js/limited-time/countdown-timer.js"></script>
-
 
         <!-- ニュースステッカー -->
         <section class="newssticker" id="newssticker">
@@ -319,8 +356,6 @@
                 <li><a href="#news"><span>2023.12.17</span>当サイトのダークモード実装について。</a></li>
             </ul>
         </section>
-
-        <script type="text/javascript" src="./js/NewsSticker.js"></script>
 
 
         <!-- アバウト -->
@@ -683,6 +718,23 @@
           ]
         }
         </script>
+
+
+    <!-- JS -->
+    <div>
+        <!-- ローディング画面用JS -->
+        <script type="text/javascript" src="./js/loading.js"></script>
+
+        <!-- テキスト出現アニメJS -->
+        <script src="./js/TextAnimation.js"></script>
+
+        <!-- メニューバーJS -->
+        <script type="text/javascript" src="./js/menu.js"></script>
+
+        <!-- ニュースステッカー用JS -->
+        <script type="text/javascript" src="./js/NewsSticker.js"></script>
+    </div>
+
 </body>
 
 </html>
