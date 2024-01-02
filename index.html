@@ -194,7 +194,7 @@
 
 
     <!-- お知らせポップアップ -->
-    <div class="overlay">
+    <!-- <div class="overlay">
         <div class="btn_area">
             <p class="ttl">サイトからのお知らせ</p>
             <p class="btn_area-text">画像を更新しました！
@@ -209,7 +209,7 @@
             </p>
             <button>閉じる</button>
         </div>
-    </div>
+    </div> -->
 
     <script type="text/javascript">
         $(function () {
@@ -409,8 +409,8 @@
                                         <dd>以下のリンクよりdiscordサーバーに参加し各種規約、応募方法等をご一読ください。<br>
                                             <a href="https://discord.com/invite/kRQgH32KtJ" target="_blank"
                                                 rel=”noopener noreferrer” class="discord-a">
-                                                <i class="fa-solid fa-up-right-from-square"></i>
                                                 discordサーバーに参加
+                                                <i class="fa-solid fa-up-right-from-square"></i>
                                             </a>
                                         </dd>
                                     </span>
@@ -485,9 +485,9 @@
                         </span>
                     </span>
                 </ul>
-                <a href="https://forms.gle/rtEMJ4iCxUdDUrBX7" class="float3" target="_blank" rel=”noopener
-                    noreferrer”><i class="fa-solid fa-up-right-from-square"></i>
+                <a href="https://forms.gle/rtEMJ4iCxUdDUrBX7" class="float3" target="_blank" rel=”noopener noreferrer”>
                     お問い合わせをする
+                    <i class="fa-solid fa-up-right-from-square"></i>
                 </a>
             </div>
         </section>
@@ -540,27 +540,29 @@
 
         <!-- SNS宣伝 -->
         <section class="sns" id="sns">
+            <h2 class="sec-title"><span class="smoothText"><span class="smoothTextTrigger">最新動画/ポスト<p>
+                            ※最新の動画が１つ自動で表示されます</p></span></p>
+            </h2>
             <div class="youtube-mov">
-                <h2 class="sec-title"><span class="smoothText"><span class="smoothTextTrigger">最新動画/ポスト<p>
-                                ※最新の動画が１つ自動で表示されます</p></span></p>
-                </h2>
-                <div id="youtubeList">
+                <div id="SNSList">
                     <!-- youtube -->
-                    <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/?list=UUsRFGU2GvUthBcZYbxWtXHA&mute=1"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <!-- ツイッター -->
-                <div class="Xlist">
-                    <a class="twitter-timeline" data-height="450"
-                        href="https://twitter.com/woodry_?ref_src=twsrc%5Etfw">Tweets by woodry_</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div class="youtube-mov">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/?list=UUsRFGU2GvUthBcZYbxWtXHA&mute=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- ツイッター -->
+                    <div class="Xlist">
+                        <a class="twitter-timeline" data-height="450" width="560px"
+                            href="https://twitter.com/woodry_?ref_src=twsrc%5Etfw">Tweets by woodry_</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                 </div>
             </div>
             <div class="snss">
-                <h2 class="sec-title"><span class="smoothText"><span class="smoothTextTrigger">各種<span
+                <h2 class="sec-title SNStitle"><span class="smoothText"><span class="smoothTextTrigger">各種<span
                                 class="sns-text">sns</span></span></span></h2>
                 <ul>
                     <li>
@@ -580,7 +582,10 @@
                         <a
                             href="https://twitter.com/intent/tweet?hashtags=WoodryServer&original_referer=http%3A%2F%2F127.0.0.1%3A5500%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&related=%40woodry_%2C%40reno__GG&text=WoodrySever%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E3%81%99!(%40woodry_)&url=https%3A%2F%2Freno01111.github.io%2Fwoodryserverweb-test%2F&via=reno__GG">
                             <i class="fa-solid fa-share-from-square"></i><i class="fa-brands fa-x-twitter"></i>
-                            <span>(Twitter)でシェアする</span></a>
+                            <span>(Twitter)でシェアする</span>
+                        </a>
+                    </li>
+                    <li>
                         <section class="copy-page-section">
                             <section class="copy-page-section">
                                 <button type="button" id="copy-page">
@@ -591,60 +596,62 @@
                                 </button>
                             </section>
                         </section>
-                        <!-- コピーボタン用JS -->
-                        <script>
-                            document.getElementById("copy-page").onclick = function () {
-                                var copyText = location.href;
-
-                                // 仮のtextareaを作成し、そこにリンクをセットする
-                                var tempTextArea = document.createElement("textarea");
-                                tempTextArea.value = copyText;
-                                document.body.appendChild(tempTextArea);
-
-                                // テキストを選択し、コピー
-                                tempTextArea.select();
-                                document.execCommand('copy');
-
-                                // 仮のtextareaを削除
-                                document.body.removeChild(tempTextArea);
-
-                                document.getElementById("cAction").innerHTML = "コピーしました！";
-
-                                // 2秒後にメッセージをクリア
-                                setTimeout(function () {
-                                    document.getElementById("cAction").innerHTML = "サイトURLをコピー";
-                                }, 2000);
-                            };
-                        </script>
                     </li>
-                    <li class="qr-">
-                        <img src="./img/page-QR.png" alt="">
-                    </li>
-                    <li>
-                        <button onclick="showConfirmation()" id="qr-share"><i
-                                class="fa-solid fa-download"></i>サイトをQRコードでシェア</button>
+                </ul>
+                <!-- コピーボタン用JS -->
+                <script>
+                    document.getElementById("copy-page").onclick = function () {
+                        var copyText = location.href;
 
-                        <!-- QRタウンロートボタンJS -->
-                        <script>
-                            function showConfirmation() {
-                                // サイトダイアログを表示
-                                var confirmation = confirm("ダウンロードしますか？");
+                        // 仮のtextareaを作成し、そこにリンクをセットする
+                        var tempTextArea = document.createElement("textarea");
+                        tempTextArea.value = copyText;
+                        document.body.appendChild(tempTextArea);
 
-                                // ユーザーが「はい」を選択した場合
-                                if (confirmation) {
-                                    // ここに画像をダウンロードするための処理を追加
-                                    // 例: 画像のURLを指定してダウンロード
-                                    var imageUrl = "./img/page-QR.png";
-                                    var link = document.createElement('a');
-                                    link.href = imageUrl;
-                                    link.download = 'WoodryServrt_QR.jpg';
-                                    document.body.appendChild(link);
-                                    link.click();
-                                    document.body.removeChild(link);
-                                }
+                        // テキストを選択し、コピー
+                        tempTextArea.select();
+                        document.execCommand('copy');
+
+                        // 仮のtextareaを削除
+                        document.body.removeChild(tempTextArea);
+
+                        document.getElementById("cAction").innerHTML = "コピーしました！";
+
+                        // 2秒後にメッセージをクリア
+                        setTimeout(function () {
+                            document.getElementById("cAction").innerHTML = "サイトURLをコピー";
+                        }, 2000);
+                    };
+                </script>
+                </li>
+                <li class="qr-">
+                    <img src="./img/page-QR.png" alt="">
+                </li>
+                <li>
+                    <button onclick="showConfirmation()" id="qr-share"><i
+                            class="fa-solid fa-download"></i>サイトをQRコードでシェア</button>
+
+                    <!-- QRタウンロートボタンJS -->
+                    <script>
+                        function showConfirmation() {
+                            // サイトダイアログを表示
+                            var confirmation = confirm("ダウンロードしますか？");
+
+                            // ユーザーが「はい」を選択した場合
+                            if (confirmation) {
+                                // ここに画像をダウンロードするための処理を追加
+                                // 例: 画像のURLを指定してダウンロード
+                                var imageUrl = "./img/page-QR.png";
+                                var link = document.createElement('a');
+                                link.href = imageUrl;
+                                link.download = 'WoodryServrt_QR.jpg';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
                             }
-                        </script>
-                    </li>
+                        }
+                    </script>
+                </li>
                 </ul>
             </div>
         </section>
