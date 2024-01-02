@@ -153,13 +153,15 @@
 }
 
 .btn_area-text {
-    font-size: 15px;
     padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .btn_area a {
     padding-bottom: 20px;
+}
+
+.btn_area p {
+    font-size: 15px;
 }
 
 .btn_area-urlText {
