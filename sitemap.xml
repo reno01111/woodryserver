@@ -5,7 +5,7 @@
 <url>
   <loc>https://reno01111.github.io/woodryserver/</loc>
   <priority>1.0</priority>
-  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -17,33 +17,48 @@
     </image:image>
 </url>
 <url>
-  <loc>https://reno01111.github.io/woodryserver/page/rules/site-policy.html</loc>
+  <loc>https://reno01111.github.io/woodryserver/page/gallery/gallery.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://reno01111.github.io/woodryserver/page/gallery/gallery.html</loc>
+  <loc>https://reno01111.github.io/woodryserver/page/rules/site-policy.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://reno01111.github.io/woodryserver/page/blog/dark-mode/dark-mode.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://reno01111.github.io/woodryserver/page/blog/image/image.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://reno01111.github.io/woodryserver/index.html</loc>
   <priority>0.7</priority>
-  <lastmod>2023-12-17T18:42:26+09:00</lastmod>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/rules/rules.html</loc>
+  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/index.html</loc>
+  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/404/404.html</loc>
+  <priority>0.7</priority>
   <changefreq>monthly</changefreq>
 </url>
 
