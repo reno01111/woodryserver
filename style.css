@@ -1,0 +1,980 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Zen Kurenaido";
+    src: url("./fonts/ZenKurenaido-Regular.ttf");
+}
+
+html {
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 100%;
+    /* 16px */
+    scroll-behavior: smooth;
+}
+
+.sec-title {
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.sns-text {
+    text-transform: uppercase;
+}
+
+.sec-title p {
+    font-size: 20px;
+}
+
+
+/* アバウト */
+.about {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* 要素の中央揃え */
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.about li {
+    text-align: left;
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
+#about {
+    padding-left: 50px;
+    padding-bottom: 200px;
+}
+
+.about-img {
+    width: 40%;
+    height: 40%;
+    filter: drop-shadow(5px 10px 10px #606060);
+    /* 背景透過部分は無視して影をつける */
+}
+
+#about ul li:first-child {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#about ul {
+    list-style: none;
+}
+
+#about ul li a {
+    color: #24292e;
+}
+
+.cont-rink {
+    padding-top: 10px;
+}
+
+.about ul li a {
+    padding-top: 10px;
+    transition: all 0.2s;
+}
+
+.about ul li a:hover {
+    opacity: 0.6;
+}
+
+.cont-rink a {
+    transition: all 0.2s;
+}
+
+.cont-rink a:hover {
+    opacity: 0.6;
+}
+
+
+/* 参加方法 */
+.join-youtube {
+    justify-content: center;
+    /* 要素の中央揃え */
+    display: flex;
+    background-color: white;
+    padding-bottom: 200px;
+}
+
+.join-sec {
+    padding-left: 20px;
+}
+
+.join-sec ul li {
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.flow03 li dl dd a {
+    font-size: 1.28rem;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.flow03 li dl dd a:hover {
+    opacity: 0.6;
+}
+
+.flow_design03 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.flow_design03 ul {
+    padding: 0;
+}
+
+.flow_design03 li {
+    list-style-type: none;
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
+.flow_design03 dd {
+    text-align: left;
+    margin-left: 0;
+}
+
+.flow03 {
+    position: relative;
+}
+
+.flow03::before {
+    content: "";
+    width: 15px;
+    height: 100%;
+    background: #eee;
+    margin-left: -129px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    border-radius: 20px;
+}
+
+.flow03>li {
+    position: relative;
+}
+
+.flow03>li:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.flow03>li .icon03 {
+    font-size: 0.8em;
+    width: 2em;
+    height: 2em;
+    line-height: 2;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 100vh;
+    color: #fff;
+    background: #8EB83C;
+    display: inline-block;
+    margin-right: 0.3em;
+}
+
+.flow03>li dl {
+    padding-left: 70px;
+    position: relative;
+}
+
+.flow03>li dl::before,
+.flow03>li dl::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+}
+
+.flow03>li dl::before {
+    width: 7px;
+    height: 7px;
+    margin-top: -3px;
+    background: #8EB83C;
+    border-radius: 50%;
+    left: -4px;
+}
+
+.flow03>li dl::after {
+    width: 50px;
+    border-bottom: 1px dashed #999;
+    position: absolute;
+    left: 5px;
+}
+
+.flow03>li dl dt {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #8EB83C;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+
+/* 規約・お問い合わせ */
+.rules-contact {
+    background-color: white;
+    display: flex;
+    padding-bottom: 200px;
+    justify-content: center;
+    /* 要素の中央揃え */
+    padding-right: 100px;
+}
+
+.rules {
+    padding-left: 10px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.rules h2 {
+    padding-bottom: 10px;
+}
+
+.contact h2 {
+    padding-bottom: 10px;
+}
+
+.rules ul li {
+    text-align: left;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.contact {
+    text-align: center;
+    padding-left: 30px;
+}
+
+.contact ul li {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+
+/* ニュース・お知らせ */
+.news-sec {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* 要素の中央揃え */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.news-sec a {
+    color: #000
+}
+
+.news-sec h2 {
+    padding-bottom: 15px;
+}
+
+.news {
+    padding-right: 50px;
+    padding-bottom: 100px;
+    max-width: 50%;
+    margin: 0 auto 0 auto;
+    font-size: 0.9rem;
+}
+
+#news dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #c8c8c8;
+    margin-bottom: 20px;
+}
+
+#news dt {
+    width: 10%;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 15px;
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
+#news dd {
+    width: 80%;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 15px;
+}
+
+#news dd a {
+    display: block;
+}
+
+.notice {
+    padding-left: 10px;
+    justify-content: center;
+    /* 要素の中央揃え */
+    padding-bottom: 100px;
+    max-width: 50%;
+    margin: 0 auto 0 auto;
+    font-size: 0.9rem;
+}
+
+#notice dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #c8c8c8;
+    margin-bottom: 20px;
+}
+
+#notice dt {
+    width: 10%;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 15px;
+}
+
+#notice dd {
+    width: 80%;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 15px;
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
+#notice dd a {
+    display: block;
+}
+
+
+/* SNS宣伝 */
+.sns {
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.snss img {
+    width: 250px;
+    transition: all 0.8s;
+    border-radius: 10px;
+}
+
+.youtube {
+    padding-top: 200px;
+    padding-right: 20px;
+    padding-left: 50px;
+}
+
+.sns h2 {
+    padding-bottom: 50px;
+}
+
+.youtube-mov {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 10px;
+}
+
+#SNSList {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.Xlist {
+    padding-top: 50px;
+    padding-left: 10px;
+}
+
+.Xlist iframe {
+    width: 200px;
+}
+
+.snss li {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.snss a {
+    color: #000;
+    text-decoration: none;
+}
+
+.SNStitle {
+    padding: 50px 0 50px;
+}
+
+#copy-page {
+    margin-top: 30px;
+    transition: all 0.7s;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.fa-brands.fa-x-twitter::before {
+    font-size: 25px;
+}
+
+.fa-brands.fa-youtube::before {
+    font-size: 25px;
+}
+
+.fa-solid.fa-clipboard::before {
+    font-size: 20px;
+}
+
+#qr-share {
+    transition: all 0.7s;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.snss ul li button {
+    color: black;
+}
+
+.fa-download:before {
+    font-size: 25px;
+}
+
+.snss ul li a:hover {
+    text-decoration: underline;
+}
+
+.snss button:hover {
+    text-decoration: underline;
+}
+
+
+/* ページトップボタン */
+#page-top-but,
+#page-top-but a {
+    background-color: #f5f5f5;
+    text-align: center;
+    text-decoration: none;
+}
+
+#page-top-but a p {
+    padding: 30px;
+    color: #000;
+}
+
+#page-top-but a:hover {
+    text-decoration: underline;
+}
+
+
+/* フッター */
+.footer {
+    background-color: white;
+    padding: 1rem;
+    color: #999;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer a {
+    font-size: 0.9rem;
+    color: #24292e;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    color: #000;
+    opacity: 0.5;
+    text-decoration: underline;
+}
+
+
+@media (min-width: 768px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .md-flex {
+        display: flex;
+    }
+
+    .md-flex li+li {
+        margin-left: 16px;
+    }
+}
+
+
+/* レスポンシブ */
+@media screen and (max-width: 959px) {
+    .about {
+        display: block;
+        padding: 0;
+    }
+
+    #about {
+        padding-top: 20px;
+        padding-left: 0;
+    }
+
+    .about li {
+        text-align: center;
+    }
+
+    .about-img {
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .join-youtube {
+        display: block;
+        padding-left: 0;
+    }
+
+    .join-sec {
+        padding-left: 0;
+    }
+
+    .youtube {
+        padding-top: 30px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .youtube iframe {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        height: 500px;
+    }
+
+    .rules-contact {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rules ul li {
+        text-align: center;
+        text-wrap: balance;
+        word-break: auto-phrase;
+    }
+
+    .contact {
+        padding-top: 50px;
+        padding-left: 0;
+    }
+
+    .news-sec {
+        display: block;
+    }
+
+    .news {
+        padding-bottom: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .notice {
+        padding-top: 30px;
+        border-top: none;
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .sns {
+        display: block;
+        padding-right: 0;
+    }
+
+    #SNSList {
+        padding-top: 0;
+        padding-right: 0;
+        display: block;
+    }
+
+    .sns h2 {
+        padding-bottom: 20px;
+    }
+
+    .youtube-mov {
+        padding-right: 0;
+    }
+
+    #youtubeList iframe {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 90%;
+        height: 450px;
+    }
+
+    .Xlist {
+        padding-left: 0;
+    }
+
+    .Xlist div {
+        margin: 0 auto;
+    }
+
+    .snss {
+        padding-left: 0;
+    }
+
+    .copyright {
+        text-align: right;
+    }
+
+    .md-flex {
+        display: flex;
+    }
+
+    .md-flex a {
+        padding-left: 10px;
+    }
+
+    .youtube-mov {
+        display: block;
+    }
+
+    .youtube-mov iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        display: block;
+        padding: 0;
+    }
+
+    .about li {
+        text-align: center;
+    }
+
+    #about {
+        padding-left: 0;
+    }
+
+    .about-img {
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .join-youtube {
+        display: block;
+    }
+
+    .join-sec {
+        padding-left: 0;
+    }
+
+    .youtube {
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .youtube iframe {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 30px;
+        width: 100%;
+        height: 250px;
+    }
+
+    .rules-contact {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rules ul li {
+        text-align: center;
+    }
+
+    .contact {
+        padding-top: 50px;
+        padding-left: 0;
+    }
+
+    .slide {
+        height: 200px;
+    }
+
+    .news-sec {
+        display: block;
+    }
+
+    .news {
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+
+    .notice {
+        padding-top: 30px;
+        border-top: none;
+        padding-left: 0;
+    }
+
+    .sns {
+        display: block;
+    }
+
+    #SNSList {
+        padding-top: 0;
+        padding-right: 0;
+        display: block;
+    }
+
+    .sns h2 {
+        padding-bottom: 20px;
+    }
+
+    #youtubeList iframe {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 90%;
+        height: 250px;
+    }
+
+    .sns {
+        display: block;
+        padding-right: 0;
+    }
+
+    .copyright {
+        text-align: right;
+    }
+
+    .md-flex {
+        display: flex;
+    }
+
+    .md-flex a {
+        padding-left: 10px;
+    }
+
+    .youtube-mov {
+        display: block;
+    }
+
+    .youtube-mov iframe {
+        width: 100%;
+    }
+}
+
+
+/* ========== ダークモード ========== */
+@media (prefers-color-scheme: dark) {
+    .about-img {
+        filter: drop-shadow(5px 10px 10px #a0a0a0);
+    }
+
+    .sec-title {
+        color: #f5f5f5;
+    }
+
+    .about {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    #about ul li a {
+        color: #f5f5f5;
+    }
+
+    .join-youtube {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    .flow03 li dl dd a {
+        color: #f5f5f5;
+    }
+
+    .rules-contact {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    .float3 {
+        color: #f5f5f5;
+    }
+
+    .news-sec {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    .news-sec a {
+        color: #f5f5f5;
+    }
+
+    .sns {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    .snss a {
+        color: #f5f5f5;
+    }
+
+    #copy-page {
+        color: #f5f5f5;
+    }
+
+    #qr-share {
+        color: #f5f5f5;
+    }
+
+    .page-top-sec {
+        background-color: #313339;
+        border: 1px solid #f5f5f5;
+    }
+
+    #page-top-but a {
+        color: #f5f5f5;
+    }
+
+    .footer {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    .footer a {
+        color: #f5f5f5;
+    }
+}
+
+
+
+
+/* =========== 新年 ========================== */
+.coundown {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 2rem;
+}
+
+.coundown p {
+    font-size: 200%;
+}
+
+.coundown h2 {
+    font-size: 250%;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgb(220, 50, 50);
+    text-align: center;
+    color: #fff;
+}
+
+#loadingLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loadingLogo svg {
+    width: 400px;
+}
+
+/* SVGアニメーション */
+
+#mask path {
+    fill-opacity: 0;
+    transition: fill-opacity .5s;
+    fill: none;
+    stroke: #fff;
+}
+
+#mask.done path {
+    fill: #fff;
+    fill-opacity: 1;
+    stroke: none;
+}
+
+/* 画面遷移 */
+
+.loadingBg {
+    display: none;
+}
+
+body.appear .loadingBg {
+    display: block;
+    content: "";
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: rgb(220, 50, 50);
+    animation: slideAnime 1.2s ease-in-out forwards;
+}
+
+@keyframes slideAnime {
+    0% {
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+    50.001% {
+        transform-origin: right;
+    }
+
+    100% {
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+.wrapper {
+    opacity: 0;
+}
+
+body.appear .wrapper {
+    animation: appearAnime 1s .8s forwards;
+    opacity: 0;
+}
+
+@keyframes appearAnime {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

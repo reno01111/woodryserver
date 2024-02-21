@@ -1,0 +1,316 @@
+/* メニューバー */
+/*========= ぼかしのためのCSS ===============*/
+#menu-bar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.mainblur {
+    filter: blur(8px);
+}
+
+
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav {
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: rgba(255, 255, 255, 0.3);
+    /*背景を少し透過させる*/
+    /*動き*/
+    transition: all 0.3s;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive {
+    opacity: 1;
+    z-index: 999;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    display: none;
+    /*はじめは非表示*/
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#g-nav.panelactive ul {
+    display: block;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+#g-nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+}
+
+#g-nav li a:hover {
+    transform: scale(1.1);
+    color: #a3a3a3;
+}
+
+#g-nav li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #a3a3a3;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: left top;
+    /*左上基点*/
+}
+
+#g-nav li a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1 {
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+/*×に変化*/
+.openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #3d3d3d;
+    width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#drop-of-water {
+    z-index: -1;
+}
+
+
+/* ========== リンク線追加 ========== */
+.gnavi {
+    display: flex;
+    flex-wrap: wrap;
+    /*スマホ表示折り返し用なのでPCのみなら不要*/
+    list-style: none;
+    justify-content: center;
+}
+
+.gnavi li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.gnavi li {
+    margin-bottom: 20px;
+}
+
+.gnavi li a {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+}
+
+.gnavi li a:hover {
+    opacity: 0.6;
+}
+
+.gnavi li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #939393;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: left top;
+    /*左上基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+.lead {
+    padding: 50px 20px;
+}
+
+
+/* ========== リンクの形状 ========== */
+#page-top {
+    padding-right: 10px;
+}
+
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(158, 158, 158, 0.85);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#page-top a:hover {
+    background: rgba(100, 100, 100, 0.85);
+    transform: scale(1.1);
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .openbtn1 span {
+        background-color: #f5f5f5;
+    }
+
+    #g-nav li a {
+        color: #f5f5f5;
+    }
+
+    #g-nav li a:hover {
+        color: black;
+    }
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>https://reno01111.github.io/woodryserver/</loc>
+  <priority>1.0</priority>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <loc>https://reno01111.github.io/woodryserver/</loc>
+    <image:image>
+        <image:loc>https://reno01111.github.io/woodryserver/img/page-img.png</image:loc>
+        <image:title>WoodryServer</image:title>
+        <image:caption>開催が待ちきれなくて作ったファンメイドのサイトです。公式のサイトではありません。</image:caption>
+    </image:image>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/gallery/gallery.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/rules/site-policy.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/blog/dark-mode/dark-mode.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/blog/image/image.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/index.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2024-01-07T21:53:41+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/rules/rules.html</loc>
+  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://reno01111.github.io/woodryserver/page/index.html</loc>
+  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+</urlset>

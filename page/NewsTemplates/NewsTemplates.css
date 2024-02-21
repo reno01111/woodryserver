@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 100%;
+    /* 16px */
+    scroll-behavior: smooth;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.article-text ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.page-title {
+    text-transform: capitalize;
+}
+
+.article-text ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.article-text ul li {
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
+
+/* ========== ヘッダー ========== */
+#heder {
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+#heder a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ========== 記事 ==========  */
+.article {
+    text-align: center;
+}
+
+.article h1 {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.article-text {
+    display: inline-block;
+    text-align: left;
+    max-width: 45%;
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
+
+/* ========== フッター ========== */
+.sns {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+
+/* ========== レスポンシブ ========== */
+@media screen and (max-width: 959px) {
+    .article-text {
+        max-width: 100%;
+    }
+}
+
+/* ========== ダークモード ========== */
+@media (prefers-color-scheme: dark) {
+    a {
+        color: lightblue;
+    }
+
+    .page-title {
+        color: #f5f5f5;
+    }
+
+    body {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    #footer a {
+        color: #f5f5f5;
+    }
+}

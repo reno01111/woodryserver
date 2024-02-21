@@ -1,0 +1,27 @@
+/* ========== パンくずリスト ========== */
+.breadcrumb {
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.breadcrumb a {
+    color: black;
+}
+
+.breadcrumb li:not(:last-of-type)::after {
+    content: "›";
+    margin: 0 .6em;
+    /* 記号の左右の余白 */
+    color: #777;
+    /* 記号の色 */
+}
+
+
+/* ========== ダークモード ========== */
+@media (prefers-color-scheme: dark) {
+    .breadcrumb a {
+        color: #f5f5f5;
+    }
+}

@@ -1,0 +1,783 @@
+/* クッキー同意ポップアップ */
+.cookie-consent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: -200px;
+    left: calc(50% - 650px/2);
+    width: 650px;
+    font-size: 12px;
+    background: #fff;
+    padding: 1.2em;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    visibility: visible;
+    transition: .5s;
+    z-index: 50;
+}
+
+.cookie-consent.is-show {
+    bottom: 30px;
+}
+
+.cookie-text {
+    width: 90%;
+}
+
+.cookie-agree {
+    color: #fff;
+    background: dodgerblue;
+    padding: .5em 1.5em;
+}
+
+.cookie-agree:hover {
+    cursor: pointer;
+}
+
+/* パッと消える */
+.cc-hide1 {
+    display: none;
+}
+
+/* ゆっくり消える */
+.cc-hide2 {
+    animation: hide 1s linear 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 650px) {
+    .cookie-consent {
+        flex-direction: column;
+        width: 300px;
+        left: calc(50% - 300px/2);
+    }
+
+    .cookie-text {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+
+/*========= LoadingのためのCSS ===============*/
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: #eee;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg {
+    width: 300px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+    fill-opacity: 0;
+    /*最初は透過0で見えない状態*/
+    transition: fill-opacity 0.5s;
+    /*カラーがつく際のアニメーション0.5秒で変化*/
+    fill: none;
+    /*塗りがない状態*/
+    stroke: #333;
+    /*線の色*/
+}
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path {
+    fill: #333;
+    /*塗りの色*/
+    fill-opacity: 1;
+    /*透過1で見える状態*/
+    stroke: none;
+    /*線の色なし*/
+}
+
+
+/*========= モーダル表示のためのCSS ===============*/
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 1
+}
+
+.btn_area {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    text-align: center;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.btn_area .ttl {
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.btn_area-text {
+    padding-top: 15px;
+}
+
+.btn_area a {
+    padding-bottom: 20px;
+}
+
+.btn_area p {
+    font-size: 15px;
+}
+
+.btn_area-urlText {
+    padding-bottom: 30px;
+}
+
+.btn_area button {
+    display: block;
+    margin: 0 auto;
+    background: #333;
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn_area button:hover {
+    background: #777
+}
+
+
+/*========= スクロールダウンのためのCSS ===============*/
+
+/*=== 丸が動いてスクロールを促す ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown2 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    padding: 20px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span {
+    /*描画位置*/
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    /*テキストの形状*/
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    /*丸の形状*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eee;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+    animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+    0% {
+        bottom: 45px;
+    }
+
+    100% {
+        bottom: -5px;
+    }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 線の描写 */
+.scrolldown2:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    width: 2px;
+    height: 50px;
+    background: #eee;
+}
+
+
+/* メニューバー */
+/*========= ぼかしのためのCSS ===============*/
+#menu-bar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.mainblur {
+    filter: blur(8px);
+}
+
+
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav {
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: rgba(255, 255, 255, 0.3);
+    /*背景を少し透過させる*/
+    /*動き*/
+    transition: all 0.3s;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive {
+    opacity: 1;
+    z-index: 999;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    display: none;
+    /*はじめは非表示*/
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#g-nav.panelactive ul {
+    display: block;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+#g-nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+}
+
+#g-nav li a:hover {
+    transform: scale(1.1);
+    color: #505050;
+}
+
+#g-nav li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #a3a3a3;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: left top;
+    /*左上基点*/
+}
+
+#g-nav li a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1 {
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+/*×に変化*/
+.openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #3d3d3d;
+    width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#drop-of-water {
+    z-index: -1;
+}
+
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+#header {
+    position: relative;
+    /*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;
+    /*高さを全画面にあわせる*/
+}
+
+#video-area {
+    position: fixed;
+    z-index: -1;
+    /*最背面に設定*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh;
+    /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw;
+    /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/*見出し設定*/
+#header h1 {
+    /*要素の配置*/
+    position: absolute;
+    /*要素を天地中央寄せ*/
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
+    color: #fff;
+    text-shadow: 0 0 20px #303030;
+    font-size: 60px;
+    transition: all 0.7;
+    cursor: default;
+}
+
+#about {
+    text-align: center;
+}
+
+/*== ボタン共通設定 */
+.btn02 {
+    /*背景の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    outline: none;
+}
+
+/*ボタン内側の設定*/
+.btn02 span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    border: 1px solid #333;
+    /* 重なりを3Dで表示 */
+    transform-style: preserve-3d;
+    /* アニメーションの設定 数字が少なくなるほど早く回転 */
+    transition: 0.5s;
+}
+
+
+/*== くるっと回転（手前に） */
+/* 回転前 */
+.rotatefront span:nth-child(1) {
+    background: #fff;
+    color: #333;
+    transform: rotateX(0deg);
+    /*はじめは回転なし*/
+    transform-origin: 0 50% -25px;
+    /* 回転する起点 */
+}
+
+/*hoverをした後の形状*/
+.rotatefront:hover span:nth-child(1) {
+    transform: rotateX(-90deg);
+    /* X軸に-90度回転 */
+}
+
+/* 回転後 */
+.rotatefront span:nth-child(2) {
+    background: #000;
+    color: #fff;
+    transform: rotateX(90deg);
+    /*はじめはX軸に90度回転*/
+    transform-origin: 0 50% -25px;
+    /* 回転する起点 */
+}
+
+/*hoverをした後の形状*/
+.rotatefront:hover span:nth-child(2) {
+    transform: rotateX(0deg);
+    /* X軸に0度回転 */
+}
+
+
+/* 規約 */
+/*== 上に移動し影がついて浮き上がる */
+
+/*ボタンの形状*/
+.float3 {
+    position: relative;
+    top: 0;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    color: #333;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+/*hoverをしたらボックスに影がつき、上に上がる*/
+.float3:hover {
+    top: -3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+/*==================================================
+ニュースティッカーのためのcss
+===================================*/
+.slider {
+    background-color: white;
+}
+
+/*ニュース1行の周りの余白*/
+.slider a {
+    color: #000;
+    text-align: center;
+    display: block;
+    background: #eeeeee;
+    padding: 20px;
+}
+
+
+/* ニューススティッカー */
+/*日付*/
+.slider span {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    color: #777;
+}
+
+
+/* リンクシェア等 */
+.copy-page-section {
+    text-align: center;
+}
+
+.copy-twitter {
+    padding-bottom: 5px;
+}
+
+.copy-page-section {
+    align-items: center;
+    display: block;
+}
+
+/*--- 線から塗り（共通設定） ---*/
+
+.btn05 {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;
+    /*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+
+/* .btn05:hover {
+    background: #333;
+    color: #fff;
+} */
+
+/*線の設定*/
+.btn05 span {
+    display: block;
+}
+
+/*横線の設定*/
+.btn05::before,
+.btn05::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    /*線の形状*/
+    width: 0;
+    height: 1px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn05 span::before,
+.btn05 span::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    /*線の形状*/
+    width: 1px;
+    height: 0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn05:hover::before,
+.btn05:hover::after {
+    width: 100%;
+}
+
+.btn05:hover span::before,
+.btn05:hover span::after {
+    height: 100%;
+}
+
+/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
+
+/*左下から右下へ伸びる横線*/
+.bordercircle2::after {
+    left: 0;
+    bottom: 0;
+}
+
+/*右下から上へ伸びる縦線*/
+.bordercircle2 span::after {
+    right: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*右上から左上へ伸びる横線*/
+.bordercircle2::before {
+    right: 0;
+    top: 0;
+    transition-delay: 0.4s;
+}
+
+/*左上から左下へ伸びる横線*/
+.bordercircle2 span::before {
+    left: 0;
+    top: 0;
+    transition-delay: 0.6s;
+}
+
+
+
+/* ============ 文字登場アニメ ================== */
+span.smoothText {
+    overflow: hidden;
+    display: block;
+}
+
+/* アニメーションで傾斜がついている文字列を水平に戻す*/
+span.smoothTextTrigger {
+    transition: .8s ease-in-out;
+    transform: translate3d(0, 100%, 0) skewY(12deg);
+    transform-origin: left;
+    display: block;
+}
+
+span.smoothTextTrigger.smoothTextAppear {
+    transform: translate3d(0, 0, 0) skewY(0);
+}
+
+
+/* ========== ダークモード ==========*/
+@media (prefers-color-scheme: dark) {
+    .rotatefront span:nth-child(2) {
+        background-color: #777;
+    }
+
+    .newssticker {
+        border: 1px solid #bababa;
+    }
+
+    .slider a {
+        background-color: #313339;
+        color: #f5f5f5;
+    }
+
+    .float3 {
+        color: #f5f5f5;
+    }
+
+    .openbtn1 span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #bababa;
+        width: 45%;
+    }
+
+    #g-nav li a:hover {
+        color: #000000;
+    }
+}
